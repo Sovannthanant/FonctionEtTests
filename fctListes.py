@@ -75,18 +75,29 @@ print("-"*50)
 
 #----------------------------------------FONCTION DE VANN SOVANNTHANANT----------------------------------------
 
-#def colorer_lego():
+def pourcentage_colorer(pourcentage):
+    if pourcentage >=100:
+        print("La pièce est déja été colorer a 100% avec cette couleur.")
+    elif pourcentage <=100:
+        pourcentage += 25
+    return pourcentage
 
 #Une liste avec des pièces de légos.
-liste_legos = ["lego","lego2","lego3"]
-couleur = str.lower(input("Qu'elle est la couleur appliquer? "))
-print(liste_legos)
+pourcentage = 0
+liste_legos = ["lego 1x1x1","lego 1x2x2","lego 1x2x4"]
+print(f"Lego disponibles: {liste_legos}.")
 
-pourcentage = 25
-peinturer = input("Quelle pièce de légos voulez vous peinturez? ")
-if peinturer in liste_legos:
-    print(f"{peinturer} et colorer de {couleur} à {pourcentage}%.")
-else:
-    print("Veuillez choisir une pièce de légo valide.")
+#Choisir une couleur pour peinturer.
+while True:
+    couleur = str.lower(input("Qu'elle couleur voulez vous appliquer? "))
+    piece = input("Quelle pièce de légos voulez vous peinturez? ")
+    pourcentage = pourcentage_colorer(pourcentage)
+    print(f"{piece} et colorer de {couleur} à {pourcentage}%.")
+    continuer = bool(int(input("Apuyez 1 pour continuer à peinturer: ")))
+    if continuer == True:
+        continue
+    else:
+        break
+
 
 print("-"*50)
