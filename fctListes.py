@@ -28,53 +28,44 @@ Nom :                   3   1   2
 1. Fonction qui reçoit les points de vies et les points de défenses d'un joueur et les points d'attaques de l'autre et
 qui retourne les points de vies restants après l'attaque.
 """
+
+import random
+
 print("-"*50)
 print("Bienvenue dans la bataille")
-pts_vie=100
-pts_attaque=20
-pts_defense=15
-pts_joueur= pts_vie
-pts_joueur= pts_vie
+#Initialisation des points
+pts_joueur1 = 100
+pts_joueur2 = 100
 
-def points_vies(pts_vie):
-    """
-    fonction qui reçoit des point de vie
-    :return:
-    """
-    return points_vies(pts_vie)
+#Defense et attaque aléatoire
+#la fonciton randint choisi des nombre la syntaxe est la suivante
 
-    pass
-def points_attaques(pts_attaque):
-    """fonction de defense
+pts_defense1 = random.randint(1, 20)
+pts_defense2 = random.randint(1, 20)
+attaque1 = random.randint(1, 20)
+attaque2 = random.randint(1, 20)
+def combat(pts_joueur1,pts_joueur2,pts_defense1,pts_defense2,attaque1,attaque2):
+    compteur = 0
+    while True:
+        if attaque1 > 0 and attaque2 > 0:
+            print(f"Tour {compteur + 1}")
+        print(f"Attaque Joueur 1: {attaque1} | Défense Joueur 2: {pts_defense2}")
+        print(f"Attaque Joueur 2: {attaque2} | Défense Joueur 1: {pts_defense1}")
 
-    return:"""
-    return points_attaques(pts_attaque)
+        if attaque1>0 and attaque2>0:
+            return f"Je me defends:{pts_joueur2 - attaque1 and attaque2 or pts_defense2}"
+            return f""
+        elif attaque2 >attaque1:
+            return f"Je me defends:{pts_joueur1-attaque2 and attaque1 or pts_defense1}"
+        compteur+=1
 
-def points_defenses(pts_defense):
-    """fonction de defense"""
-    return points_defenses(pts_defense)
-
-def fonction_joueur1():
-    """fonction pour le joueur 1"""
-    return
-def fonction_joueur2():
-    """fonction pour le joueur 2"""
-    pass
-def combat():
-    if fonction_joueur1() > fonction_joueur2():
-        print("Joueur 1 reporte la partie la partie")
-    elif fonction_joueur1() == fonction_joueur2():
-        print("Les joueurs sont a égalité")
-    elif fonction_joueur1() < fonction_joueur2():
-        print("Le Joueur 2 remporte la partie")
-    else:
-        print("le joueur")
-        print("")
+if __name__ == '__main__':
+    pts_joueur1,pts_joueur2=combat(pts_joueur1,pts_joueur2,pts_defense1,pts_defense2,attaque1,attaque2)
 
 print("-"*50)
 
 #----------------------------------------FONCTION DE VANN SOVANNTHANANT----------------------------------------
-
+"""
 #def colorer_lego():
 
 #Une liste avec des pièces de légos.
@@ -90,3 +81,5 @@ else:
     print("Veuillez choisir une pièce de légo valide.")
 
 print("-"*50)
+"""
+
