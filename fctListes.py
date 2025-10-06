@@ -64,6 +64,25 @@ if __name__ == '__main__':
 
 print("-"*50)
 
+import random
+
+legos=["lego1","lego2","lego3","lego4"]
+couleurs=["rouge", "jaune","vert","bleu"]
+pourcentage=["1%","2%","3%,4%"]
+def liste_code(legos,couleurs,pourcentage,):
+    #Entrer les données suivantes:
+
+    choix_lego=random.choice(legos)
+    choix_couleur=random.choice(couleurs)
+    choix_pourcentage=random.choice(pourcentage)
+    print(f"Le lego choisi est: {choix_lego}")
+    print(f"La couleur choisi est: {choix_couleur}")
+    print(f"Le lego choisi est: {choix_pourcentage}")
+       for lego in legos:
+           if choix_lego = lego:
+
+
+
 #----------------------------------------FONCTION DE VANN SOVANNTHANANT----------------------------------------
 <<<<<<< HEAD
 """
